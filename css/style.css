@@ -1,0 +1,226 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif
+}
+:root{
+    --color-1:#7651DC;
+    --color-2:#FAEEE2;
+    --color-3:#FFCC69;
+    --color-4:#FFFFFF;
+    --color-5:#DCD1FC;
+}
+.container{
+    padding:5px;
+    display: grid;
+    gap:15px;
+    grid-template-columns:repeat(4 , 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    background-color:#EEE;
+}
+.container > div{
+    background-color:#7651DC;
+    border-radius:4px;
+    padding:10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.container .one{
+    grid-row: 1 / span 3;
+    background-color:var(--color-2);
+} 
+.container .one h3{
+    width: 138px;
+    text-align: left;
+}
+.container .one h3 span{
+    color:#7651DC;
+    font-style: italic;
+}
+.container .one img{
+    width:150px;
+    display: block;
+    margin: 20px auto;
+}
+.container .two{
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+    padding:50px;
+} 
+.container .two h1{
+    color:var(--color-4);
+    text-transform: capitalize;
+    font-size: 4rem;
+    font-weight: 400;
+    text-align: center;
+}
+.container .two h1 span{
+    color:var(--color-3);
+}
+.container .two img{
+    width:150px;
+    display: block;
+    margin: 10px auto;
+}
+.container .two p{
+    color:#DCD1FC;
+    text-align: center;
+}
+.container .two p::first-letter{
+    text-transform: uppercase;
+}
+.container .three{
+    grid-row: 1 / span 4;
+    background-color:var(--color-5);
+}  
+.container .three h3{
+    width:150px;
+    font-size:1.5rem
+}
+.container .three h3::first-letter{
+    text-transform: uppercase;
+}
+.container .three img{
+    width:300px;
+    display: block;
+    margin: 5px auto;
+}
+.container .three p{
+    padding: 10px;
+    width: 170px;
+    text-align: left;
+}
+.container .three p::first-letter{
+    text-transform: uppercase;
+}
+.container .four{
+    grid-row: 3 / span 2;
+    background-color:var(--color-4);
+}  
+.container .four img{
+    width:300px;
+    display: block;
+    
+}
+.container .four h3{
+    width:130px
+}
+.container .four h3::first-letter{
+    text-transform: uppercase;;
+}
+.container .five{
+    grid-row: 3 / span 2;
+    background-color:var(--color-3);
+    padding:0;
+}  
+.container .five h3{
+    width:130px;
+    padding:10px 0
+}
+.container .five h3::first-letter{
+    text-transform: uppercase;;
+}
+.container .five img{
+    width:250px;
+    display: block;
+    
+}
+.container .six{
+    grid-row: 5 / 7;
+    grid-column: 2 / 3;
+    background-color:var(--color-4);
+}  
+.container .six h2{
+    font-size:2.4rem
+}  
+.container .six p{
+    padding:8px 0;
+}  
+.container .six img{
+    width:250px;
+}
+.container .seven{
+    grid-row: 5 / 7;
+    grid-column: 3 / 5;
+    flex-direction:row;
+}  
+.container .seven img{
+    width:300px;
+}
+.container .seven p{
+    align-self: center;
+    font-size: 34px;
+    color: var(--color-4);
+    width: 247px;
+    text-transform: capitalize;
+}
+.container .eight{
+    grid-row: 4 / span 3;
+    background-color:var(--color-3);
+}
+.container .eight img{
+    width: 316px;
+    display: block;
+    margin: 55px auto;
+}
+.container .eight h2{
+    font-size: 3.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        display:flex;
+        flex-direction:column;
+    }
+    
+    .container .one h3 {
+        width: 196px;
+        text-align: left;
+    }
+    .container .three h3 {
+        width: 100%;
+        text-align: center;
+    }
+    .container .three p {
+        padding: 10px;
+        width: 249px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .container .six {
+        align-content: start;
+
+    }
+    .container .six {
+        align-content: start;
+    }
+    
+    .container .one{
+        order:7
+    }
+    .container .two{
+        order:1
+    }
+    .container .three{
+        order:4
+    }
+    .container .four{
+        order:2
+    }
+    .container .five{
+        order:3
+    }
+    .container .six{
+        order:6
+    }
+    .container .seven{
+        order:5
+    }
+    .container .eight{
+        order:8
+    }
+}
